@@ -5,7 +5,7 @@ import NewExpense from "./components/NewExpense/NewExpense";
 function App() {
   const [expense, setExpense] = useState([])
   const expenseHandler=(data)=>{
-    setExpense((current)=>[...current, data])
+    setExpense((current)=>[ data,...current])
   }
   return (
     <div>
