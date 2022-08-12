@@ -17,10 +17,10 @@ function Expenses({ expenses }) {
     setYear(data);
   };
 
-  let expenseItems = <p style={{color: "white"}}>No items found</p>;
+  let expenseItems = <p style={{ color: "white" }}>No items found</p>;
 
-  if (expenses.length > 0) {
-    expenseItems=filteredExpenses()?.map((expense) => (
+  if (filteredExpenses().length > 0) {
+    expenseItems = filteredExpenses()?.map((expense) => (
       <ExpenseItem
         key={expense.id}
         date={expense.date}
@@ -33,7 +33,7 @@ function Expenses({ expenses }) {
   return (
     <Card className="expenses">
       <ExpensesFilter yearHandler={yearHandler} selectedYear={year} />
-     {expenseItems}
+      {expenseItems}
     </Card>
   );
 }
