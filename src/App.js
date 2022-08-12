@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <NewExpense expenseHandler={expenseHandler}/>
-     <Expenses expenses={expense}/>
+      <Expenses expenses={expense}/>
     </div>
   );
 }
