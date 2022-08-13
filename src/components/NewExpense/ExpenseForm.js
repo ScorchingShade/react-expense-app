@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import "./ExpenseForm.css";
 
 
-function ExpenseForm({onSaveExpenseData}) {
+function ExpenseForm({onSaveExpenseData, onCancelHandler}) {
 
   const initialStates={
     title:'',
@@ -59,6 +59,7 @@ function ExpenseForm({onSaveExpenseData}) {
       </div>
 
       <div className="new-expense__actions">
+        <button type="button" onClick={onCancelHandler}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
