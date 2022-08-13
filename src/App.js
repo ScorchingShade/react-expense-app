@@ -9,6 +9,9 @@ function App() {
   }
   return (
     <div>
+      <div className="title">
+        TrackSense
+      </div>
       <NewExpense expenseHandler={expenseHandler}/>
       <Expenses expenses={expense}/>
     </div>
